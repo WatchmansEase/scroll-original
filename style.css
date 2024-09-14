@@ -1,0 +1,286 @@
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Progress bar styling */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #4caf50;
+  z-index: 99;
+  transition: width 0.25s ease;
+}
+
+#article-info {
+  top: 220px;
+  position: fixed;
+  left: 0;
+}
+
+#article-info p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: aliceblue;
+  margin: 10px auto;
+}
+
+.ads {
+  background: aliceblue;
+  margin: 10px auto;
+}
+
+/* Body content styling */
+article {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 768px;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.single-article-header {
+  padding: 20px;
+}
+
+.metro-factbox {
+  background: #cacaca;
+  margin: 0px auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.ad-slot-container {
+  margin: 0px auto;
+  max-width: 500px;
+}
+
+.metro-poll {
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+.post-strip {
+  background: #cacaca;
+  padding: 20px;
+}
+
+footer {
+  background: aliceblue;
+  margin: 0px auto;
+}
+
+.article-info {
+  display: block;
+  width: 100vw;
+}
+
+.zopo-link {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.zopo-item__thumbnail > img {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 150px;
+  height: 100px;
+}
+
+.metro-email-signup-travel {
+  background-image: url("imgs/travel-signup-background.png");
+}
+
+.metro-poll {
+  background: #cacaca;
+  padding: 20px;
+  color: white;
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.share-buttons-top {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.share-buttons .share-buttons-sub {
+  background: #f6f6f6;
+  border: 0;
+  box-sizing: border-box;
+  display: none;
+  left: 215px;
+  padding: 14px 14px 14px 17px;
+  position: absolute;
+  text-align: center;
+  top: calc(100% + 13px);
+}
+
+.comment-now {
+  background-color: #000;
+  border-radius: 25px;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  margin-left: auto;
+  padding: 7px;
+  place-items: center;
+}
+
+.figcaption,
+.single-article figcaption {
+  background: #f0f0f0;
+  color: #000;
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 0.875rem;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  line-height: 1.25rem;
+  padding: 0.5em 1em;
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  #toast.show {
+    font-size: 38px;
+  }
+  article {
+    max-width: 100%;
+  }
+  .metro-poll {
+    max-width: 100%;
+  }
+  .metro-factbox {
+    max-width: 100%;
+  }
+  #article-info {
+    font-size: 31px;
+    background: whitesmoke;
+    padding: 10px;
+    bottom: 550px;
+    top: unset;
+  }
+  .topnav a {
+    font-size: 40px;
+  }
+  #progressBar {
+    height: 15px;
+  }
+  .img-container {
+    max-width: 100% !important;
+  }
+  .img-container img {
+    width: 100%;
+  }
+}
+
+/* The toast - position it at the bottom and in the middle of the screen */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+
+/* Show the toast when clicking on a button (class added with JavaScript) */
+#toast.show {
+  visibility: visible; /* Show the toast */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 1.5s;
+  animation: fadein 0.5s, fadeout 0.5s 1.5s;
+}
+
+/* Animations to fade the toast in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
